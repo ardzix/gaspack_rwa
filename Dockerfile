@@ -4,8 +4,6 @@ FROM python:3.11-slim-buster
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-ARG SUPERVISORD_CONFIG=supervisord.vps.conf
-
 # Install system dependencies for building Python libraries
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -54,7 +52,7 @@ EXPOSE 8001
 
 # Create supervisor directory and copy configuration
 RUN mkdir -p /etc/supervisor/conf.d
-COPY gaspack_rwa/${SUPERVISORD_CONFIG} /etc/supervisor/conf.d/supervisord.conf
+COPY gaspack_rwa/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 RUN ls -la /etc/supervisor/conf.d/supervisord.conf
 
