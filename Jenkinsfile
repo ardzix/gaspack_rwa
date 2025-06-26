@@ -81,18 +81,23 @@ pipeline {
                         echo "[INFO] Preparing VPS deployment..."
                         ssh -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no root@172.105.124.43 "mkdir -p /root/gaspack_rwa"
 
-                        echo "[INFO] Copying .env and config files to VPS..."
-                        scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no .env root@172.105.124.43:/root/gaspack_rwa/.env
-                        scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no supervisord.conf root@172.105.124.43:/root/gaspack_rwa/supervisord.conf
-                        scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no uwsgi.ini root@172.105.124.43:/root/gaspack_rwa/uwsgi.ini
+                        echo "[INFO] Copying .env and supervisord config to VPS..."
+                        scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no ./gaspack_rwa/.env root@172.105.124.43:/root/gaspack_rwa/.env
+                        scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no ./gaspack_rwa/supervisord.vps.conf root@172.105.124.43:/root/gaspack_rwa/supervisord.conf
 
                         echo "[INFO] Deploying Docker service to Swarm..."
-                        ssh -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no root@172.105.124.43 "
+                        ssh -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no root@172.105.124.43 bash -c '
                             docker swarm init || true
                             docker network create --driver overlay production || true
                             docker service rm gaspack_rwa || true
-                            docker service create --name gaspack_rwa --replicas 1 --network production --env-file /root/gaspack_rwa/.env --mount type=bind,src=/root/gaspack_rwa/supervisord.conf,dst=/etc/supervisor/conf.d/supervisord.conf,ro=true --mount type=bind,src=/root/gaspack_rwa/uwsgi.ini,dst=/app/uwsgi.ini,ro=true --mount type=volume,src=gaspack_media,dst=/app/media --mount type=volume,src=gaspack_static,dst=/app/staticfiles ardzix/gaspack_rwa:latest
-                        "
+
+                            docker service create --name gaspack_rwa \
+                                --replicas 1 \
+                                --network production \
+                                --env-file /root/gaspack_rwa/.env \
+                                --mount type=bind,src=/root/gaspack_rwa/supervisord.conf,dst=/etc/supervisor/conf.d/supervisord.conf,ro=true \
+                                ardzix/gaspack_rwa:latest
+                        '
                     '''
                 }
             }
