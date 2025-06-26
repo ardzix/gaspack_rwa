@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-_fig0d_pbiwvt!!%0_@kbovn@25dpy%l$_&e6*v=e4aetrkfqf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rwa.gaspack.xyz']
 
 
 # Application definition
