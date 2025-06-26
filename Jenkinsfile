@@ -87,21 +87,12 @@ pipeline {
                         scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no uwsgi.ini root@172.105.124.43:/root/gaspack_rwa/uwsgi.ini
 
                         echo "[INFO] Deploying Docker service to Swarm..."
-                        ssh -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no root@172.105.124.43 bash -c '
+                        ssh -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no root@172.105.124.43 "
                             docker swarm init || true
                             docker network create --driver overlay production || true
                             docker service rm gaspack_rwa || true
-
-                            docker service create --name gaspack_rwa \
-                                --replicas 1 \
-                                --network production \
-                                --env-file /root/gaspack_rwa/.env \
-                                --mount type=bind,src=/root/gaspack_rwa/supervisord.conf,dst=/etc/supervisor/conf.d/supervisord.conf,ro=true \
-                                --mount type=bind,src=/root/gaspack_rwa/uwsgi.ini,dst=/app/uwsgi.ini,ro=true \
-                                --mount type=volume,src=gaspack_media,dst=/app/media \
-                                --mount type=volume,src=gaspack_static,dst=/app/staticfiles \
-                                ardzix/gaspack_rwa:latest
-                        '
+                            docker service create --name gaspack_rwa --replicas 1 --network production --env-file /root/gaspack_rwa/.env --mount type=bind,src=/root/gaspack_rwa/supervisord.conf,dst=/etc/supervisor/conf.d/supervisord.conf,ro=true --mount type=bind,src=/root/gaspack_rwa/uwsgi.ini,dst=/app/uwsgi.ini,ro=true --mount type=volume,src=gaspack_media,dst=/app/media --mount type=volume,src=gaspack_static,dst=/app/staticfiles ardzix/gaspack_rwa:latest
+                        "
                     '''
                 }
             }
