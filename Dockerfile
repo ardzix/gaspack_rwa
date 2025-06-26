@@ -50,6 +50,10 @@ RUN chmod -R 755 /usr/src/app/gaspack_rwa
 # Expose port for uWSGI/Django
 EXPOSE 8001
 
+# Create supervisor directory and copy configuration
+RUN mkdir -p /etc/supervisor/conf.d
+COPY /usr/src/app/gaspack_rwa/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 RUN ls -la /etc/supervisor/conf.d/supervisord.conf
 
 # Run Supervisor to manage processes
