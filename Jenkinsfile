@@ -83,7 +83,7 @@ pipeline {
 
                         echo "[INFO] Copying .env and supervisord config to VPS..."
                         scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no ./gaspack_rwa/.env root@172.105.124.43:/root/gaspack_rwa/.env
-                        scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no ./gaspack_rwa/supervisord.vps.conf root@172.105.124.43:/root/gaspack_rwa/supervisord.conf
+                        scp -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no ./gaspack_rwa/supervisord.conf root@172.105.124.43:/root/gaspack_rwa/supervisord.conf
 
                         echo "[INFO] Deploying Docker service to Swarm..."
                         ssh -i "$SSH_KEY_FILE" -o StrictHostKeyChecking=no root@172.105.124.43 bash -c '
