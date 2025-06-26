@@ -1,0 +1,72 @@
+[
+  {
+    "model": "nft_simulator.simulatednft",
+    "pk": "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+    "fields": {
+      "user": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "asset": "11111111-1111-1111-1111-111111111111",
+      "token_id": "GASPACK_11111111-1111-1111-1111-111111111111_bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "ownership_percentage": "0.50",
+      "slots_owned": 5,
+      "is_deleted": false,
+      "created_at": "2024-01-20T15:30:00Z",
+      "updated_at": "2024-01-20T15:30:00Z"
+    }
+  },
+  {
+    "model": "nft_simulator.simulatednft",
+    "pk": "bbbbbbbb-2222-3333-4444-cccccccccccc",
+    "fields": {
+      "user": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+      "asset": "22222222-2222-2222-2222-222222222222",
+      "token_id": "GASPACK_22222222-2222-2222-2222-222222222222_cccccccc-cccc-cccc-cccc-cccccccccccc",
+      "ownership_percentage": "0.40",
+      "slots_owned": 2,
+      "is_deleted": false,
+      "created_at": "2024-01-25T10:15:00Z",
+      "updated_at": "2024-01-25T10:15:00Z"
+    }
+  },
+  {
+    "model": "nft_simulator.simulatednft",
+    "pk": "cccccccc-3333-4444-5555-dddddddddddd",
+    "fields": {
+      "user": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "asset": "33333333-3333-3333-3333-333333333333",
+      "token_id": "GASPACK_33333333-3333-3333-3333-333333333333_dddddddddddd-dddd-dddd-dddddddddddd",
+      "ownership_percentage": "5.00",
+      "slots_owned": 10,
+      "is_deleted": false,
+      "created_at": "2024-02-05T14:20:00Z",
+      "updated_at": "2024-02-05T14:20:00Z"
+    }
+  },
+  {
+    "model": "nft_simulator.simulatednft",
+    "pk": "dddddddd-4444-5555-6666-eeeeeeeeeeee",
+    "fields": {
+      "user": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+      "asset": "44444444-4444-4444-4444-444444444444",
+      "token_id": "GASPACK_44444444-4444-4444-4444-444444444444_eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+      "ownership_percentage": "1.00",
+      "slots_owned": 3,
+      "is_deleted": false,
+      "created_at": "2024-02-12T09:45:00Z",
+      "updated_at": "2024-02-12T09:45:00Z"
+    }
+  },
+  {
+    "model": "nft_simulator.simulatednft",
+    "pk": "eeeeeeee-5555-6666-7777-bbbbbbbbbbbb",
+    "fields": {
+      "user": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "asset": "55555555-5555-5555-5555-555555555555",
+      "token_id": "GASPACK_55555555-5555-5555-5555-555555555555_bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "ownership_percentage": "2.00",
+      "slots_owned": 8,
+      "is_deleted": false,
+      "created_at": "2024-02-18T16:30:00Z",
+      "updated_at": "2024-02-18T16:30:00Z"
+    }
+  }
+] 

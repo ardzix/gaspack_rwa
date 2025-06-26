@@ -1,0 +1,97 @@
+[
+  {
+    "model": "users.user",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@gaspack.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "john_doe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-15T10:00:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jane_smith",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane.smith@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-20T14:30:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mike_wilson",
+      "first_name": "Mike",
+      "last_name": "Wilson",
+      "email": "mike.wilson@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-01T09:15:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sarah_jones",
+      "first_name": "Sarah",
+      "last_name": "Jones",
+      "email": "sarah.jones@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-10T16:45:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+] 

@@ -1,0 +1,82 @@
+[
+  {
+    "model": "payments.paymentlog",
+    "pk": "aaaaaaaa-1111-2222-3333-444444444444",
+    "fields": {
+      "user": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "idrx_transaction_id": "IDRX_TXN_001",
+      "amount": "7500000.00",
+      "currency": "IDR",
+      "status": "completed",
+      "payment_method": "credit_card",
+      "description": "Purchase of 5 slots in Padel Field - Jakarta",
+      "is_deleted": false,
+      "created_at": "2024-01-20T15:30:00Z",
+      "updated_at": "2024-01-20T15:30:00Z"
+    }
+  },
+  {
+    "model": "payments.paymentlog",
+    "pk": "bbbbbbbb-2222-3333-4444-555555555555",
+    "fields": {
+      "user": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+      "idrx_transaction_id": "IDRX_TXN_002",
+      "amount": "4000000.00",
+      "currency": "IDR",
+      "status": "completed",
+      "payment_method": "bank_transfer",
+      "description": "Purchase of 2 slots in Futsal Arena - Bandung",
+      "is_deleted": false,
+      "created_at": "2024-01-25T10:15:00Z",
+      "updated_at": "2024-01-25T10:15:00Z"
+    }
+  },
+  {
+    "model": "payments.paymentlog",
+    "pk": "cccccccc-3333-4444-5555-666666666666",
+    "fields": {
+      "user": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "idrx_transaction_id": "IDRX_TXN_003",
+      "amount": "50000000.00",
+      "currency": "IDR",
+      "status": "completed",
+      "payment_method": "credit_card",
+      "description": "Purchase of 10 slots in Swimming Pool Complex - Surabaya",
+      "is_deleted": false,
+      "created_at": "2024-02-05T14:20:00Z",
+      "updated_at": "2024-02-05T14:20:00Z"
+    }
+  },
+  {
+    "model": "payments.paymentlog",
+    "pk": "dddddddd-4444-5555-6666-777777777777",
+    "fields": {
+      "user": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+      "idrx_transaction_id": "IDRX_TXN_004",
+      "amount": "7500000.00",
+      "currency": "IDR",
+      "status": "completed",
+      "payment_method": "crypto",
+      "description": "Purchase of 3 slots in Badminton Hall - Medan",
+      "is_deleted": false,
+      "created_at": "2024-02-12T09:45:00Z",
+      "updated_at": "2024-02-12T09:45:00Z"
+    }
+  },
+  {
+    "model": "payments.paymentlog",
+    "pk": "eeeeeeee-5555-6666-7777-888888888888",
+    "fields": {
+      "user": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "idrx_transaction_id": "IDRX_TXN_005",
+      "amount": "24000000.00",
+      "currency": "IDR",
+      "status": "completed",
+      "payment_method": "bank_transfer",
+      "description": "Purchase of 8 slots in Fitness Center - Bali",
+      "is_deleted": false,
+      "created_at": "2024-02-18T16:30:00Z",
+      "updated_at": "2024-02-18T16:30:00Z"
+    }
+  }
+] 

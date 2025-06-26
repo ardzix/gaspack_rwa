@@ -1,0 +1,175 @@
+[
+  {
+    "model": "users.user",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@gaspack.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-01T00:00:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "john_doe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-15T10:00:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jane_smith",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane.smith@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-20T14:30:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mike_wilson",
+      "first_name": "Mike",
+      "last_name": "Wilson",
+      "email": "mike.wilson@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-01T09:15:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$test123$hash_here",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sarah_jones",
+      "first_name": "Sarah",
+      "last_name": "Jones",
+      "email": "sarah.jones@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-10T16:45:00Z",
+      "is_deleted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "assets.asset",
+    "pk": "11111111-1111-1111-1111-111111111111",
+    "fields": {
+      "name": "Downtown Office Tower",
+      "description": "A prestigious 25-story office building in the heart of the financial district. Features modern amenities, 24/7 security, and is 95% leased to Fortune 500 companies. Generates stable monthly rental income with long-term tenants.",
+      "total_slots": 1000,
+      "price_per_slot": "2500.00",
+      "is_deleted": false,
+      "created_at": "2024-01-15T10:00:00Z",
+      "updated_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "assets.asset",
+    "pk": "22222222-2222-2222-2222-222222222222",
+    "fields": {
+      "name": "Luxury Beachfront Resort",
+      "description": "A 5-star beachfront resort with 150 rooms, multiple restaurants, spa facilities, and private beach access. Located in a prime tourist destination with year-round occupancy rates above 85%.",
+      "total_slots": 500,
+      "price_per_slot": "8000.00",
+      "is_deleted": false,
+      "created_at": "2024-01-20T14:30:00Z",
+      "updated_at": "2024-01-20T14:30:00Z"
+    }
+  },
+  {
+    "model": "assets.asset",
+    "pk": "33333333-3333-3333-3333-333333333333",
+    "fields": {
+      "name": "Suburban Shopping Center",
+      "description": "A modern shopping center with 50 retail units, anchored by major grocery and department stores. Located in a growing suburb with high foot traffic and stable tenant base.",
+      "total_slots": 200,
+      "price_per_slot": "1500.00",
+      "is_deleted": false,
+      "created_at": "2024-02-01T09:15:00Z",
+      "updated_at": "2024-02-01T09:15:00Z"
+    }
+  },
+  {
+    "model": "assets.asset",
+    "pk": "44444444-4444-4444-4444-444444444444",
+    "fields": {
+      "name": "Industrial Warehouse Complex",
+      "description": "A state-of-the-art warehouse complex with 100,000 sq ft of space, modern loading docks, and climate-controlled storage. Currently leased to logistics companies with long-term contracts.",
+      "total_slots": 300,
+      "price_per_slot": "3000.00",
+      "is_deleted": false,
+      "created_at": "2024-02-10T16:45:00Z",
+      "updated_at": "2024-02-10T16:45:00Z"
+    }
+  },
+  {
+    "model": "assets.asset",
+    "pk": "55555555-5555-5555-5555-555555555555",
+    "fields": {
+      "name": "Premium Apartment Building",
+      "description": "A luxury apartment building with 80 units, featuring modern amenities, rooftop pool, fitness center, and concierge service. Located in a trendy neighborhood with high rental demand.",
+      "total_slots": 400,
+      "price_per_slot": "4000.00",
+      "is_deleted": false,
+      "created_at": "2024-02-15T11:20:00Z",
+      "updated_at": "2024-02-15T11:20:00Z"
+    }
+  },
+  {
+    "model": "assets.asset",
+    "pk": "66666666-6666-6666-6666-666666666666",
+    "fields": {
+      "name": "Medical Office Park",
+      "description": "A specialized medical office park with 20 units designed for healthcare professionals. Features modern medical facilities, ample parking, and is located near major hospitals.",
+      "total_slots": 150,
+      "price_per_slot": "6000.00",
+      "is_deleted": false,
+      "created_at": "2024-02-20T13:10:00Z",
+      "updated_at": "2024-02-20T13:10:00Z"
+    }
+  }
+] 

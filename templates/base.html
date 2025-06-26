@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gaspack Sport | Blockchain Sport Assets{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Blockchain/NFT themed colors
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        secondary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
+                        },
+                        cyber: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        neon: {
+                            pink: '#ff0080',
+                            blue: '#00ffff',
+                            green: '#00ff80',
+                            purple: '#8000ff',
+                        }
+                    },
+                    fontFamily: {
+                        'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
+                        'cyber': ['Orbitron', 'monospace'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff' },
+                            '100%': { boxShadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(100%)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-effect {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-border {
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, #00ffff, #ff0080, #00ff80, #8000ff) border-box;
+            border-radius: 12px;
+        }
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .hologram {
+            background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+            animation: hologram 3s ease-in-out infinite;
+        }
+        @keyframes hologram {
+            0%, 100% { background-position: -200px 0; }
+            50% { background-position: 200px 0; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen cyber-grid">
+    <!-- Navigation -->
+    <nav class="glass-effect backdrop-blur-lg border-b border-cyan-500/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <a href="{% url 'assets:homepage' %}" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center animate-glow">
+                            <span class="text-xl font-bold">⚡</span>
+                        </div>
+                        <div class="font-cyber text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                            Gaspack Sport
+                        </div>
+                    </a>
+                    <div class="hidden md:block">
+                        <span class="text-xs font-mono text-cyan-400/50 animate-pulse">// Blockchain Sport Assets</span>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="{% url 'assets:asset_list' %}" class="relative group">
+                        <span class="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                            🏆 Sport Assets
+                        </span>
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300"></div>
+                    </a>
+                    
+                    {% if user.is_authenticated %}
+                        <a href="#" class="relative group">
+                            <span class="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                                🎮 Dashboard
+                            </span>
+                            <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300"></div>
+                        </a>
+                        <a href="#" class="text-sm font-medium text-gray-400 hover:text-red-400 transition-colors duration-300">
+                            🚪 Logout
+                        </a>
+                    {% else %}
+                        <a href="#" class="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                            🔐 Login
+                        </a>
+                        <a href="#" class="glass-effect px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105">
+                            ✨ Register
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect border-t border-cyan-500/10 mt-20">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+                            <span class="text-lg font-bold">⚡</span>
+                        </div>
+                        <span class="font-cyber text-lg font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                            Gaspack Sport
+                        </span>
+                    </div>
+                    <p class="text-gray-500 text-sm max-w-md">
+                        Revolutionizing sport facility investment through blockchain technology and NFT ownership. 
+                        Join the future of decentralized sports infrastructure.
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <div class="w-8 h-8 glass-effect rounded-lg flex items-center justify-center hover:bg-cyan-500/10 transition-colors cursor-pointer">
+                            <span class="text-cyan-400">📱</span>
+                        </div>
+                        <div class="w-8 h-8 glass-effect rounded-lg flex items-center justify-center hover:bg-cyan-500/10 transition-colors cursor-pointer">
+                            <span class="text-cyan-400">🐦</span>
+                        </div>
+                        <div class="w-8 h-8 glass-effect rounded-lg flex items-center justify-center hover:bg-cyan-500/10 transition-colors cursor-pointer">
+                            <span class="text-cyan-400">💬</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-cyan-400 mb-4">Platform</h3>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Sport Assets</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">NFT Marketplace</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Staking</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Governance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-cyan-400 mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Whitepaper</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">API Docs</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Support</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-cyan-500/10 mt-8 pt-8 text-center">
+                <p class="text-gray-500 text-sm font-mono">
+                    &copy; 2024 Gaspack Sport. Powered by Blockchain Technology. 
+                    <span class="text-cyan-400">Built for the Future.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
+        <div class="absolute top-1/2 left-1/2 w-48 h-48 bg-pink-500/5 rounded-full blur-3xl animate-float" style="animation-delay: -1.5s;"></div>
+    </div>
+</body>
+</html> 
