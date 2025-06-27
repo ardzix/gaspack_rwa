@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block title %}{{ asset.name }} | Sport NFT Asset{% endblock %}
 
@@ -53,11 +54,11 @@
                 <!-- Asset Stats Grid -->
                 <div class="grid grid-cols-2 gap-4">
                     <div class="glass-effect p-4 rounded-xl border border-cyan-500/20">
-                        <div class="text-2xl font-bold text-cyan-400 mb-1">{{ asset.total_slots }}</div>
+                        <div class="text-2xl font-bold text-cyan-400 mb-1">{{ asset.total_slots|intcomma }}</div>
                         <div class="text-xs text-gray-500 font-mono">TOTAL SUPPLY</div>
                     </div>
                     <div class="glass-effect p-4 rounded-xl border border-purple-500/20">
-                        <div class="text-2xl font-bold text-purple-400 mb-1">{{ available_slots }}</div>
+                        <div class="text-2xl font-bold text-purple-400 mb-1">{{ available_slots|intcomma }}</div>
                         <div class="text-xs text-gray-500 font-mono">AVAILABLE</div>
                     </div>
                     <div class="glass-effect p-4 rounded-xl border border-green-500/20">
@@ -95,12 +96,12 @@
                     <div class="flex items-center justify-between mb-6">
                         <div>
                             <div class="text-sm text-gray-500 font-mono mb-1">FLOOR PRICE</div>
-                            <div class="text-3xl font-bold text-cyan-400">Rp {{ asset.price_per_slot|floatformat:0 }}</div>
+                            <div class="text-3xl font-bold text-cyan-400">Rp {{ asset.price_per_slot|floatformat:0|intcomma }}</div>
                             <div class="text-sm text-gray-500">per NFT slot</div>
                         </div>
                         <div class="text-right">
                             <div class="text-sm text-gray-500 font-mono mb-1">MARKET CAP</div>
-                            <div class="text-2xl font-bold text-purple-400">Rp {{ total_investment|floatformat:0 }}</div>
+                            <div class="text-2xl font-bold text-purple-400">Rp {{ total_investment|floatformat:0|intcomma }}</div>
                             <div class="text-sm text-gray-500">total value</div>
                         </div>
                     </div>
@@ -216,8 +217,8 @@
                         {{ related_asset.name }}
                     </h3>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-cyan-400 font-bold">Rp {{ related_asset.price_per_slot|floatformat:0 }}</span>
-                        <span class="text-gray-500 text-sm">{{ related_asset.total_slots }} NFTs</span>
+                        <span class="text-cyan-400 font-bold">Rp {{ related_asset.price_per_slot|floatformat:0|intcomma }}</span>
+                        <span class="text-gray-500 text-sm">{{ related_asset.total_slots|intcomma }} NFTs</span>
                     </div>
                     <a href="{% url 'assets:asset_detail' related_asset.pk %}" 
                        class="block w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-400 hover:to-pink-500 transition-all duration-300">

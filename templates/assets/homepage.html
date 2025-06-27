@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block title %}{{ title }} | Blockchain Sport NFTs{% endblock %}
 
@@ -116,15 +117,15 @@
                     <div class="space-y-3 mb-6">
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500 font-mono">Floor Price</span>
-                            <span class="text-lg font-bold text-cyan-400">Rp {{ asset.price_per_slot|floatformat:0 }}</span>
+                            <span class="text-lg font-bold text-cyan-400">Rp {{ asset.price_per_slot|floatformat:0|intcomma }}</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500 font-mono">Total Supply</span>
-                            <span class="text-sm text-white">{{ asset.total_slots }} NFTs</span>
+                            <span class="text-sm text-white">{{ asset.total_slots|intcomma }} NFTs</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500 font-mono">Market Cap</span>
-                            <span class="text-sm font-semibold text-purple-400">Rp {{ asset.total_value|floatformat:0 }}</span>
+                            <span class="text-sm font-semibold text-purple-400">Rp {{ asset.total_value|floatformat:0|intcomma }}</span>
                         </div>
                     </div>
                     

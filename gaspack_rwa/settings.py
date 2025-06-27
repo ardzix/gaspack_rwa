@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-_fig0d_pbiwvt!!%0_@kbovn@25dpy%l$_&e6*v=e4aetrkfqf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rwa.gaspack.xyz']
+ALLOWED_HOSTS = ['rwa.gaspack.xyz', '127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     
     # Third party apps
     'tailwind',

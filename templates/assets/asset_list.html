@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block title %}Sport NFT Assets | Blockchain Marketplace{% endblock %}
 
@@ -36,15 +37,15 @@
                     <div class="text-xs text-gray-500 font-mono">Collections</div>
                 </div>
                 <div class="glass-effect p-4 rounded-xl border border-purple-500/20">
-                    <div class="text-2xl font-bold text-purple-400">1.2K</div>
+                    <div class="text-2xl font-bold text-purple-400">1,200</div>
                     <div class="text-xs text-gray-500 font-mono">Owners</div>
                 </div>
                 <div class="glass-effect p-4 rounded-xl border border-green-500/20">
-                    <div class="text-2xl font-bold text-green-400">2.5M</div>
+                    <div class="text-2xl font-bold text-green-400">2,500,000</div>
                     <div class="text-xs text-gray-500 font-mono">Floor Price</div>
                 </div>
                 <div class="glass-effect p-4 rounded-xl border border-pink-500/20">
-                    <div class="text-2xl font-bold text-pink-400">15.8M</div>
+                    <div class="text-2xl font-bold text-pink-400">15,800,000</div>
                     <div class="text-xs text-gray-500 font-mono">Volume</div>
                 </div>
             </div>
@@ -152,19 +153,19 @@
                         <div class="flex justify-between items-center">
                             <span class="text-xs text-gray-500 font-mono">FLOOR PRICE</span>
                             <div class="text-right">
-                                <div class="text-lg font-bold text-cyan-400">{{ asset.price_per_slot|floatformat:0 }}</div>
+                                <div class="text-lg font-bold text-cyan-400">{{ asset.price_per_slot|floatformat:0|intcomma }}</div>
                                 <div class="text-xs text-gray-500">IDR</div>
                             </div>
                         </div>
                         
                         <div class="flex justify-between items-center">
                             <span class="text-xs text-gray-500 font-mono">SUPPLY</span>
-                            <span class="text-sm text-white">{{ asset.total_slots }} NFTs</span>
+                            <span class="text-sm text-white">{{ asset.total_slots|intcomma }} NFTs</span>
                         </div>
                         
                         <div class="flex justify-between items-center">
                             <span class="text-xs text-gray-500 font-mono">MARKET CAP</span>
-                            <span class="text-sm font-semibold text-purple-400">{{ asset.total_value|floatformat:0 }} IDR</span>
+                            <span class="text-sm font-semibold text-purple-400">{{ asset.total_value|floatformat:0|intcomma }} IDR</span>
                         </div>
                     </div>
                     
@@ -172,7 +173,7 @@
                     <div class="flex items-center justify-between mb-5 text-xs">
                         <div class="flex items-center space-x-1">
                             <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                            <span class="text-gray-500 font-mono">LAST SALE: 2.1M IDR</span>
+                            <span class="text-gray-500 font-mono">LAST SALE: 2,100,000 IDR</span>
                         </div>
                         <span class="text-gray-600">2h ago</span>
                     </div>
